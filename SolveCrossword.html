@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  </style> 
+</head>
+<body>
+	<div class="top">
+		<button><a href="SignIn.html">Exit</a></button>
+		<button><a href="ChooseCrossword.html">Solve crossword</a></button>
+		<button><a href="MyCrosswords.html">My crosswords</button>
+	</div>
+	<div class="questions_panel">
+		<h3 align="center">
+			Questions
+		</h3>
+		<hr>
+		<script type="text/javascript">
+			for (var i = 0; i < 9; i++) {
+				document.write("<p align=\"center\">Question condtion here " + i + "</p>");
+			}
+		</script>
+		<hr>
+		<div align="center"><button>Finish</button></div>
+	</div>
+	<div class="table_block">
+		<table>
+			<script type="text/javascript">
+				for (var i = 0; i < 8; i++) {
+					document.write("<tr>")
+					for (var j = 0; j < 9; j++) {
+						document.write("<td><input class=\"cell_of_crossword\"></td>")
+					}
+					document.write("</tr>")
+				}
+			</script>
+		</table>
+	</div>
+</body>
+</html>
