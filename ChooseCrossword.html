@@ -4,82 +4,69 @@
 	<title>
 		
 	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="scripts/ChooseCrossword.js"></script>
 </head>
 <body>
-	<div class="top">
-		<button><a href="SignIn.html">Exit</a></button>
-		<button><a href="ChooseCrossword.html">Solve crossword</a></button>
-		<button><a href="MyCrosswords.html">My crosswords</button>
-	</div>
-	<div align="center" class="choose_crossword">
-		<button>All crosswords</button>
-		<input placeholder="Id">
-		<button>Search</button>
-		<table cellspacing="15px">
+	<header class="top">
+		<nav>
+			<button><a href="SignIn.html">Exit</a></button>
+			<button><a href="ChooseCrossword.html">Solve crossword</a></button>
+			<button><a href="MyCrosswords.html">My crosswords</a></button>
+		</nav>
+	</header>
+	<div align="center" class="choose_crossword" id="center">
+		<button class="choose_crossword_button_input">All crosswords</button>
+		<input placeholder="Id" class="choose_crossword_button_input">
+		<button  class="choose_crossword_button_input">Search</button>
+		<table cellspacing="0" class="table_stat">
 			<tr>
-				<th>
+				<th><p class="table_with_results_header">
 					Name
-				</th>
-				<th>
+				</p></th>
+				<th><p class="table_with_results_header">
 					Id
-				</th>
-				<th>
+				</p></th>
+				<th><p class="table_with_results_header">
 					Author
-				</th>
-				<th>
+				</p></th>
+				<th><p class="table_with_results_header">
 					Solve
-				</th>
+				</p></th>
+				<th><p class="table_with_results_header">
+					Statistics
+				</p></th>
 			</tr>
-			<tr>
-				<td>
-					School questions
-				</td>
-				<td>
-					12321232
-				</td>
-				<td>
-					Evgeniy_7
-				</td>
-				<td>
-					<button>
-						Solve
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					University questions
-				</td>
-				<td>
-					10354332
-				</td>
-				<td>
-					7_Ivan_7
-				</td>
-				<td>
-					<button>
-						Solve
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Math questions
-				</td>
-				<td>
-					77771232
-				</td>
-				<td>
-					Andrey_4
-				</td>
-				<td>
-					<button>
-						Solve
-					</button>
-				</td>
-			</tr>
+			<script type="text/javascript">
+				for (var i = 0; i < 8; i++) {
+					document.write("<tr>");
+					document.write('<td><p class="table_with_results_sections">Crossword name ' + i  + '</p></td>');
+					document.write('<td><p class="table_with_results_sections">Id ' + i  + '</p></td>');
+					document.write('<td><p class="table_with_results_sections">Author ' + i  + '</p></td>');
+					document.write('<td><button class="show_stat_or_solve_button">Solve</button></td>');
+					document.write('<td><button id="' + i + '" class="show_stat_or_solve_button">Show</button></td>');
+					document.write("</tr>");
+				}
+			</script>
 		</table>
+		<div class="statistics">
+			<table cellspacing="10px">
+				<tr>
+					<th><p class="table_with_results_header">Name</p></th>
+					<th><p class="table_with_results_header">Result</p></th>
+				</tr>
+				<script type="text/javascript">
+					for (var i = 0; i < 5; i++) {
+						document.write("<tr>");
+						document.write('<td><p class="table_with_results_sections">Username_' + i + '</p></td>');
+						document.write('<td><p class="table_with_results_sections">' + Math.floor(100*Math.random()) + '%</p></td>');
+						document.write("</tr>");
+					}
+				</script>
+			</table>
+		</div>
 	</div>
 </body>
 </html>

@@ -2,35 +2,39 @@
 <html>
 <head>
 	<title></title>
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="scripts/SomeScript.js"></script>
 </head>
-<body class="background">
-	<div class="top">
-		<button><a href="SignIn.html">Exit</a></button>
-		<button><a href="ChooseCrossword.html">Solve crossword</a></button>
-		<button><a href="MyCrosswords.html">My crosswords</button>
-	</div>
-	<div class="questions_panel">
+<body>
+	<header class="top">
+		<nav>
+			<button><a href="SignIn.html">Exit</a></button>
+			<button><a href="ChooseCrossword.html">Solve crossword</a></button>
+			<button><a href="MyCrosswords.html">My crosswords</a></button>
+		</nav>
+	</header>
+	<aside class="questions_panel">
 		<div align="center">
-		<h3>
+		<h2>
 			Questions
-		</h3>
+		</h2>
 		<hr>
-		<div class="question"><input type="text" placeholder="Question"><button>Delete</button></div>
-		<div class="question"><input type="text" placeholder="Question"><button>Delete</button></div>
-		<div class="question"><input type="text" placeholder="Question"><button>Delete</button></div>
-		<div class="question"><input type="text" placeholder="Question"><button>Delete</button></div>
+		<textarea placeholder="Questions here"></textarea>
 		</div>
 		<hr>
+		<div align="center">
+			<input placeholder="Name" class="entry">
+			<input placeholder="Id" class="entry">
+		</div>
 		<div align="center" class="questions_interaction">
-			<button id="btn">Add</button>
+			<button>Add</button>
 			<button>Make copy</button>
 			<button>Save</button>
 		</div>
-	</div>
-	<div class="users_crosswords">
+	</aside>
+	<aside class="users_crosswords">
 		<h3 align="center">
 			My crosswords
 		</h3>
@@ -42,23 +46,19 @@
 		<div align="center">
 			<button>Create</button>
 		</div>
-	</div>
-	<div class="table_block">
-		<table>
+	</aside>
+	<article align="center" class="crossword">
+		<table cellpadding="0px" cellpadding="0px">
 			<script type="text/javascript">
 				for (var i = 0; i < 8; i++) {
-					document.write("<tr>")
-					for (var j = 0; j < 9; j++) {
-						document.write("<td><input class=\"cell_of_crossword\"></td>")
+					document.write("<tr>");
+					for (var j = 0; j < 10; j++) {
+						document.write("<td><input class=\"table_cell\"></td>");
 					}
-					document.write("</tr>")
+					document.write("</tr>");
 				}
 			</script>
 		</table>
-		<input placeholder="Name" class="entry">
-		<input placeholder="Id" class="entry">
-		<input placeholder="Rows" class="entry">
-		<input placeholder="Col-s" class="entry">
-	</div>
+	</article>
 </body>
 </html>

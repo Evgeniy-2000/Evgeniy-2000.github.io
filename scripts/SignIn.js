@@ -1,36 +1,31 @@
 
 
-function SignIn(){
-	var name = document.getElementById('name').value;
-	var password = document.getElementById('password').value;
-	var id = 2019;
-	alert(name + password);
-	m();
-};
+/*function SignIn(){
+	var _name = document.getElementById('name').value;
+	var _password = document.getElementById('password').value;
 
+	var firebaseConfig = {
+		    apiKey: "AIzaSyC1twuLONMtc9Bed3MfAtCP16Og8BFboC0",
+		    authDomain: "final-b9d65.firebaseapp.com",
+		    databaseURL: "https://final-b9d65.firebaseio.com",
+		    projectId: "final-b9d65",
+		    storageBucket: "final-b9d65.appspot.com",
+		    messagingSenderId: "988687201947",
+		    appId: "1:988687201947:web:09f596f76aa1ae2625f83e",
+		    measurementId: "G-TGPZN8KH7B"
+		};
+	  	document.firebase.initializeApp(firebaseConfig);
 
-function m(){
-
-var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
-
-db.transaction(function (tx) { 
-   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
-   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")'); 
-   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")'); 
-
-}); 
-
-db.transaction(function (tx) { 
-   tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) { 
-      var len = results.rows.length, i; 
-      msg = "<p>Found rows: " + len + "</p>"; 
-      document.getElementById('status').innerHTML +=  msg; 
-  
-      for (i = 0; i < len; i++) { 
-         alert(results.rows.item(i).log ); 
-      } 
-  
-   }, null); 
-});
-
-}
+	  	//changing
+	 	document.firebase.database().ref("User").set({
+		    name : _name,
+		    password: _password,
+		});
+		//getting
+		firebase.database().ref('User').once('value').then(function(snapshot) {
+  			var username = (snapshot.val() && snapshot.val().name) || 'Anonymous';
+  			//alert(snapshot.val().name);
+		});
+		//adding
+		firebase.database().ref().child('User').push({name:"Anna"});
+};*/

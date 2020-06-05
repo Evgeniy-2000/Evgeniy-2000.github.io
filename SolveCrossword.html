@@ -4,40 +4,46 @@
 	<title>
 		
 	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   </style> 
 </head>
 <body>
-	<div class="top">
-		<button><a href="SignIn.html">Exit</a></button>
-		<button><a href="ChooseCrossword.html">Solve crossword</a></button>
-		<button><a href="MyCrosswords.html">My crosswords</button>
-	</div>
-	<div class="questions_panel">
-		<h3 align="center">
+	<header class="top">
+		<nav>
+			<button><a href="SignIn.html">Exit</a></button>
+			<button><a href="ChooseCrossword.html">Solve crossword</a></button>
+			<button><a href="MyCrosswords.html">My crosswords</a></button>
+		</nav>
+	</header>
+	<aside class="questions_panel questions_panel2">
+		<h3 align="center" style="color: black">
 			Questions
 		</h3>
 		<hr>
-		<script type="text/javascript">
-			for (var i = 0; i < 9; i++) {
-				document.write("<p align=\"center\">Question condtion here " + i + "</p>");
-			}
-		</script>
+		<p align="center"  class="conditions_panel">
+			<script type="text/javascript">
+				for (var i = 0; i < 25; i++) {
+					document.write('Questions here ');
+				}
+			</script>
+		</p>
 		<hr>
-		<div align="center"><button>Finish</button></div>
-	</div>
-	<div class="table_block">
-		<table>
+		<div align="center"><button>Finish</button><button>Show Statistics</button></div>
+	</aside>
+	<article class="crossword solve_crossword">
+		<table cellpadding="0px" cellpadding="0px">
 			<script type="text/javascript">
 				for (var i = 0; i < 8; i++) {
-					document.write("<tr>")
-					for (var j = 0; j < 9; j++) {
-						document.write("<td><input class=\"cell_of_crossword\"></td>")
+					document.write("<tr>");
+					for (var j = 0; j < 10; j++) {
+						document.write("<td><input class=\"table_cell table_cell2\"></td>");
 					}
-					document.write("</tr>")
+					document.write("</tr>");
 				}
 			</script>
 		</table>
-	</div>
+	</article>
 </body>
 </html>
